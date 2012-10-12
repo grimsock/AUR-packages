@@ -1,0 +1,37 @@
+# Maintainer: Dieter Plaetinck <dieter@plaetinck.be>
+# Contributor: Vladimir Chizhov <jagoterr@gmail.com>
+# Contributor: Henry Tang <henryykt@gmail.com>
+
+pkgname=phantomjs
+pkgver=1.7.0
+pkgrel=1
+pkgdesc="Headless WebKit with JavaScript API"
+url="http://www.phantomjs.org/"
+license=("BSD")
+arch=('i686' 'x86_64')
+depends=()
+makedepends=('unzip')
+conflicts=()
+replaces=()
+backup=()
+install=
+source=("http://phantomjs.googlecode.com/files/${pkgname}-${pkgver}-source.zip")
+md5sums=('f2cf1d9e98dfb84c159748d34dea5f82')
+
+build() {
+  # workaround for https://code.google.com/p/libarchive/issues/detail?id=271
+  # cd $srcdir/$pkgname-$pkgver
+  cd $srcdir
+  rm -rf $pkgname-$pkgver
+  unzip ${pkgname}-${pkgver}-source.zip
+  cd $pkgname-$pkgver
+  # workaround for http://code.google.com/p/phantomjs/issues/detail?id=635
+  sed -i 's/QMAKE_LFLAGS+=-fuse-ld=gold/#QMAKE_LFLAGS+=-fuse-ld=gold/' src/qt/src/3rdparty/webkit/Source/common.pri
+ ./build.sh
+}
+
+package() {
+  mkdir -p $pkgdir/usr/bin/
+  install -D -m755 $srcdir/$pkgname-$pkgver/bin/phantomjs $pkgdir/usr/bin/
+}
+
