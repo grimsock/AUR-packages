@@ -2,8 +2,8 @@
 
 pkgname=chromedriver
 pkgver=23.0.1240.0
-pkgrel=1
-pkgdesc="ChromeDriver is a standalone server which implements WebDriver's wire protocol"
+pkgrel=2
+pkgdesc="Standalone server which implements WebDriver's wire protocol"
 arch=('i686' 'x86_64')
 url="http://code.google.com/p/selenium/wiki/ChromeDriver"
 license=('Apache')
@@ -19,6 +19,7 @@ fi
 
 source=("http://chromedriver.googlecode.com/files/${pkgname}_${_arch}_${pkgver}.zip")
 
-build() {
-  install -D -m 755 "$srcdir/$pkgname" "$pkgdir/usr/bin/$pkgname"
+package() {
+  mkdir -p "$pkgdir/usr/bin/"
+  install -D -m 755 "$srcdir/$pkgname" "$pkgdir/usr/bin/"
 }
