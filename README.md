@@ -1,4 +1,4 @@
 PKGBUILDs
 =========
 
-list of maintained packages
+Maintained AUR packages.
