@@ -10,7 +10,9 @@ url="http://www.slf4j.org"
 license=('MIT')
 depends=('java-environment')
 optdepends=('log4j')
-source=(${url}/dist/${pkgname}-${pkgver}.tar.gz setClasspath.sh migrator.desktop)
+source=("${url}/dist/${pkgname}-${pkgver}.tar.gz"
+        "setClasspath.sh"
+        "migrator.desktop")
 
 package() {
 	mkdir -p ${pkgdir}/usr/share/java/${pkgname}
