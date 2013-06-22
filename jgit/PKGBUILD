@@ -20,7 +20,7 @@ sha256sums=('63b1624d65cdc61ef229573c2e960953aa08b6f3e77ade11c213f7222314a04a'
             '728bcb67239e5de5db12454be490550a5624cce272f9df261fe940fb360c8ede')
 
 package() {
-  install -Dm 644 "${srcdir}/org.eclipse.${pkgname}.pgm-${pkgver//_/-}.sh" "${pkgdir}/usr/share/java/${pkgname}/org.eclipse.${pkgname}.pgm-${pkgver//_/-}.sh"
+  install -Dm 755 "${srcdir}/org.eclipse.${pkgname}.pgm-${pkgver//_/-}.sh" "${pkgdir}/usr/share/java/${pkgname}/org.eclipse.${pkgname}.pgm-${pkgver//_/-}.sh"
   install -Dm 644 "license.txt" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 
   install -Dm 755 "${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
