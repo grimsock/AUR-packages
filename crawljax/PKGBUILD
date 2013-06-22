@@ -25,5 +25,5 @@ package() {
     install -Dm 644 "${srcdir}/${pkgname}-cli-${pkgver}/lib/${jar}" "${pkgdir}/usr/share/java/${pkgname}/lib/${jar}"
   done
 
-  install -Dm 755 "$pkgname" "$pkgdir/usr/bin/$pkgname"
+  install -Dm 755 "${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
 }
