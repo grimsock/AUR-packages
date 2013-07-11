@@ -7,7 +7,7 @@ pkgdesc="Standalone server which implements WebDriver's wire protocol"
 arch=('i686' 'x86_64')
 url="http://code.google.com/p/selenium/wiki/ChromeDriver"
 license=('Apache')
-depends=('chromium>=12.0.712.0' 'libpng12')
+depends=('chromium>=12.0.712.0' 'libpng12' 'gconf')
 
 if [ "$CARCH" = "i686" ]; then
     _arch='linux32'
