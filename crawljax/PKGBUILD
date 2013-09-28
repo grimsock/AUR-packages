@@ -1,7 +1,7 @@
 # Maintainer: grimsock <lord.grimsock at gmail dot com>
 
 pkgname=crawljax
-pkgver=3.1
+pkgver=3.3
 pkgrel=1
 pkgdesc="Open source Java tool for automatically crawling and testing modern web applications"
 arch=('any')
@@ -11,7 +11,7 @@ depends=('java-runtime')
 source=("http://search.maven.org/remotecontent?filepath=com/${pkgname}/${pkgname}-cli/${pkgver}/${pkgname}-cli-${pkgver}.zip"
         "crawljax")
 noextract=("${pkgname}-cli-${pkgver}.zip")
-sha256sums=('79e34d53738038d5eb3e87be6e412bc0eaf8b8e5c197043a0f78454ff33013b5'
+sha256sums=('33685a43102ab2f1061844485c376e8788e569839aa3631db126c29b49cd8647'
             '4b615d824661cd054d2c2d93152557a0e4452da02b89c80b323a8af3adb4d76e')
 
 package() {
