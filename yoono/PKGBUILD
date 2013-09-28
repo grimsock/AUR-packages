@@ -8,7 +8,7 @@ pkgver=1.8.40
 pkgrel=1
 pkgdesc="Allows you to connect to all your social networks and IM services"
 arch=('i686' 'x86_64')
-url="http://yoono.com"
+url="http://www.yoono.com"
 license=('custom:yoono')
 
 if [ "$CARCH" = "i686" ]; then
