@@ -5,7 +5,7 @@ pkgver=2.2
 pkgrel=1
 pkgdesc="Standalone server which implements WebDriver's wire protocol"
 arch=('i686' 'x86_64')
-url="http://code.google.com/p/selenium/wiki/ChromeDriver"
+url="https://code.google.com/p/chromedriver/"
 license=('Apache')
 depends=('chromium>=12.0.712.0' 'libpng12' 'gconf')
 
