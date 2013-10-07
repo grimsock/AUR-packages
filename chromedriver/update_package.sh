@@ -17,7 +17,8 @@ arch32_line=`makepkg -g -c`
 # use predefined makepkg conf file to generate x86_64 arch package checksum
 if ! [[ -f /usr/share/devtools/makepkg-x86_64.conf ]]
 then
-  echo "no makepkg conf file for x86_64 arch"
+  echo "no makepkg conf file for x86_64 arch, installing devtools"
+  sudo pacman -S devtools --noconfirm
 fi
 
 arch64_line=`makepkg -g -c --config /usr/share/devtools/makepkg-x86_64.conf`
