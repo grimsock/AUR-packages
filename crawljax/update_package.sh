@@ -11,6 +11,9 @@ current_version=`grep 'pkgver=' PKGBUILD | grep -o '[0-9.]\+'`
 # replace current version with new one
 sed -i -e "/pkgver=/ s/$current_version/$new_version/g" PKGBUILD
 
+# update crawljax bin
+sed -i -e "s/$current_version/$new_version/g" crawljax
+
 # update checksums
 updpkgsums PKGBUILD
 
