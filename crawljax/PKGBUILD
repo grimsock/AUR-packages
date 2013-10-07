@@ -2,7 +2,7 @@
 
 pkgname=crawljax
 pkgver=3.3
-pkgrel=1
+pkgrel=2
 pkgdesc="Open source Java tool for automatically crawling and testing modern web applications"
 arch=('any')
 url="http://crawljax.com/"
