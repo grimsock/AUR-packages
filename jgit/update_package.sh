@@ -13,6 +13,9 @@ current_version=`grep 'pkgver=' PKGBUILD | grep -o '[0-9._]\+r'`
 # replace current version with new one
 sed -i -e "/pkgver=/ s/$current_version/$new_version/g" PKGBUILD
 
+# update jgit bin
+sed -i -e "s/${current_version//_/-}/$1/g" jgit
+
 # update checksums
 updpkgsums PKGBUILD
 
