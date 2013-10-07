@@ -3,7 +3,7 @@
 
 pkgname=jgit
 pkgver=3.0.3.201309161630_r
-pkgrel=1
+pkgrel=2
 pkgdesc="A 100% pure java implementation of git"
 arch=('any')
 url="http://www.eclipse.org/jgit/"
