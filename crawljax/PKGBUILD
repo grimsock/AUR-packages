@@ -8,6 +8,7 @@ arch=('any')
 url="http://crawljax.com/"
 license=('apache')
 depends=('java-runtime')
+optdepends=('phantomjs: headless Webkit')
 source=("http://search.maven.org/remotecontent?filepath=com/${pkgname}/${pkgname}-cli/${pkgver}/${pkgname}-cli-${pkgver}.zip"
         "crawljax")
 noextract=("${pkgname}-cli-${pkgver}.zip")
