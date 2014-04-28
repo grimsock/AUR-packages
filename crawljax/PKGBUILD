@@ -9,7 +9,7 @@ url="http://crawljax.com/"
 license=('apache')
 depends=('java-runtime')
 optdepends=('phantomjs: headless Webkit')
-source=("http://search.maven.org/remotecontent?filepath=com/${pkgname}/${pkgname}-cli/${pkgver}/${pkgname}-cli-${pkgver}.zip"
+source=("https://github.com/${pkgname}/${pkgname}/releases/download/${pkgname}-${pkgver}/${pkgname}-cli-${pkgver}.zip"
         "crawljax")
 noextract=("${pkgname}-cli-${pkgver}.zip")
 sha256sums=('33685a43102ab2f1061844485c376e8788e569839aa3631db126c29b49cd8647'
