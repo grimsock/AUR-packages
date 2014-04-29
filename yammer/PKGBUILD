@@ -31,7 +31,7 @@ package() {
   echo "Terminal=false" >> "${srcdir}/${pkgname}.desktop"
   echo "Type=Application" >> "${srcdir}/${pkgname}.desktop"
 
-  install -m644 -D "${startdir}/src/resources/images/appicons/air_48x48.png" "${pkgdir}/usr/share/pixmaps/${pkgname}.png"
-  install -m644 -D "${startdir}/src/${_realname}.air" "${pkgdir}/opt/${pkgname}/${_realname}.air"
-  install -m644 -D "${startdir}/src/${pkgname}.desktop" "${pkgdir}/usr/share/applications/${pkgname}.desktop"
+  install -m644 -D "${srcdir}/src/resources/images/appicons/air_48x48.png" "${pkgdir}/usr/share/pixmaps/${pkgname}.png"
+  install -m644 -D "${srcdir}/src/${_realname}.air" "${pkgdir}/opt/${pkgname}/${_realname}.air"
+  install -m644 -D "${srcdir}/src/${pkgname}.desktop" "${pkgdir}/usr/share/applications/${pkgname}.desktop"
 }
