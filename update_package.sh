@@ -25,7 +25,8 @@ if (pacman -Q namcap &>/dev/null); then
 fi
 
 # generate package
-makepkg --source --force --clean
+#makepkg --source --force --clean
+mkaurball -f
 
 # cleanup
 rm -rf *.zip
