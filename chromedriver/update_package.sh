@@ -12,7 +12,7 @@ current_version=`grep 'pkgver=' PKGBUILD | grep -o '[0-9.]\+'`
 sed -i -e "/pkgver=/ s/$current_version/$new_version/g" PKGBUILD
 
 # generate md5sums
-arch32_line=`makepkg -g -c`
+arch32_line=`makepkg -g -c --config /usr/share/devtools/makepkg-i686.conf`
 
 # use predefined makepkg conf file to generate x86_64 arch package checksum
 if ! [[ -f /usr/share/devtools/makepkg-x86_64.conf ]]
