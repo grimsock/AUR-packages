@@ -16,6 +16,9 @@ sed -i -e "/pkgver=/ s/$current_version/$new_version/g" PKGBUILD
 # update checksums
 updpkgsums PKGBUILD
 
+# sed & updpkgsums changes permissions, aur accepts only files with 644 or 755
+chmod 644 PKGBUILD
+
 # if namcap installed perform chceck
 if (pacman -Q namcap &>/dev/null); then
   echo "==============================="

@@ -19,6 +19,9 @@ sed -i -e "s/${current_version//_/-}/$1/g" jgit
 # update checksums
 updpkgsums PKGBUILD
 
+# sed & updpkgsums changes permissions, aur accepts only files with 644 or 755
+chmod 644 PKGBUILD
+
 # if namcap installed perform chceck
 if (pacman -Q namcap &>/dev/null); then
   echo "==============================="

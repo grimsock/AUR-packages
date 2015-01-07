@@ -27,6 +27,9 @@ arch64_line=`makepkg -g -c --config /usr/share/devtools/makepkg-x86_64.conf`
 sed -i -e "/linux32/ {n; s/md5sums.*/$arch32_line/}" PKGBUILD
 sed -i -e "/linux64/ {n; s/md5sums.*/$arch64_line/}" PKGBUILD
 
+# sed & updpkgsums changes permissions, aur accepts only files with 644 or 755
+chmod 644 PKGBUILD
+
 # if namcap installed perform chceck
 if (pacman -Q namcap &>/dev/null); then
   echo "==============================="
