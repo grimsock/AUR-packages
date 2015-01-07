@@ -8,7 +8,8 @@ arch=('i686' 'x86_64')
 url="https://sites.google.com/a/chromium.org/chromedriver/"
 license=('Apache')
 depends=('libpng12' 'gconf')
-optdepends=('chromium' 'google-chrome')
+optdepends=('google-chrome')
+conflicts=('chromium')
 
 if [ "$CARCH" = "i686" ]; then
     _arch='linux32'
