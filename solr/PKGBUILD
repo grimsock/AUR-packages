@@ -8,7 +8,7 @@ pkgdesc="Popular, blazing fast open source enterprise search platform from the A
 arch=('any')
 license=('Apache')
 url="http://lucene.apache.org/solr/"
-depends=('java-environment')
+depends=('java-environment-common')
 makedepends=('unzip')
 source=("http://archive.apache.org/dist/lucene/solr/$pkgver/solr-$pkgver.tgz"
         "jetty-solr.xml"

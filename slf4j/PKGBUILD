@@ -8,7 +8,7 @@ pkgdesc="A successor to the log4j project."
 arch=('any')
 url="http://www.slf4j.org"
 license=('MIT')
-depends=('java-environment')
+depends=('java-environment-common')
 optdepends=('log4j')
 source=("${url}/dist/${pkgname}-${pkgver}.tar.gz"
         "setClasspath.sh"

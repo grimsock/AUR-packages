@@ -8,7 +8,7 @@ pkgdesc="A 100% pure java implementation of git"
 arch=('any')
 url="http://www.eclipse.org/jgit/"
 license=('custom:EDL')
-depends=('java-runtime')
+depends=('java-runtime-common')
 source=("https://repo.eclipse.org/content/groups/releases//org/eclipse/${pkgname}/org.eclipse.${pkgname}.pgm/${pkgver//_/-}/org.eclipse.${pkgname}.pgm-${pkgver//_/-}.sh"
         "license.txt"
         "jgit")

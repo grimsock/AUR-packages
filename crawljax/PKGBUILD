@@ -7,7 +7,7 @@ pkgdesc="Open source Java tool for automatically crawling and testing modern web
 arch=('any')
 url="http://crawljax.com/"
 license=('apache')
-depends=('java-runtime')
+depends=('java-runtime-common')
 optdepends=('phantomjs: headless Webkit')
 source=("https://github.com/${pkgname}/${pkgname}/releases/download/${pkgname}-${pkgver}/${pkgname}-cli-${pkgver}.zip"
         "crawljax")
