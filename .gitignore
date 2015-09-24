@@ -1,8 +1,4 @@
-*.src.tar.gz
-*.pkg.tar.xz
-*.tar.bz2
-*.zip
-*.air
-src
-pkg
-.PKGINFO
+*
+!.gitignore
+!aur2aur4.sh
+!update_script.sh

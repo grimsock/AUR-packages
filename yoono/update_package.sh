@@ -25,12 +25,11 @@ if (pacman -Q namcap &>/dev/null); then
   echo "==============================="
 fi
 
-# generate package
-#makepkg --source --force --clean
-mkaurball -f
+# generate .SRCINFO
+mksrcinfo
 
 # cleanup
 rm -rf *.zip
 rm -rf *.tar.bz2
 
-echo "ready to AUR upload"
+echo "commit to AUR"
