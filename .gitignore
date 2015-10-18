@@ -1,4 +1,1 @@
-*
-!.gitignore
-!aur2aur4.sh
-!update_script.sh
+.SRCINFO
