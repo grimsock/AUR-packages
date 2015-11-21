@@ -34,3 +34,6 @@ mksrcinfo
 rm -rf *.zip
 
 echo "commit to AUR"
+
+git add -p
+git commit -m "Update to $new_version"
