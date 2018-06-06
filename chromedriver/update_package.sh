@@ -12,7 +12,6 @@ current_version=`grep 'pkgver=' PKGBUILD | grep -o '[0-9.]\+'`
 sed -i -e "/pkgver=/ s/$current_version/$new_version/g" PKGBUILD
 
 # generate md5sums
-arch32_line=`makepkg -g -c --config /usr/share/devtools/makepkg-i686.conf`
 
 # use predefined makepkg conf file to generate x86_64 arch package checksum
 if ! [[ -f /usr/share/devtools/makepkg-x86_64.conf ]]
@@ -24,8 +23,7 @@ fi
 arch64_line=`makepkg -g -c --config /usr/share/devtools/makepkg-x86_64.conf`
 
 # replace old checksums with new ones
-sed -i -e "/linux32/ {n; s/md5sums.*/$arch32_line/}" PKGBUILD
-sed -i -e "/linux64/ {n; s/md5sums.*/$arch64_line/}" PKGBUILD
+updpkgsums PKGBUILD
 
 # sed & updpkgsums changes permissions, aur accepts only files with 644 or 755
 chmod 644 PKGBUILD
